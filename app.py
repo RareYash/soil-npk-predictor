@@ -22,8 +22,8 @@ st.markdown("**Sentinel-2 + XGBoost | R²: N=0.38, P=0.24, K=0.42**")
 
 # Input coordinates
 col1, col2 = st.columns(2)
-lat = col1.number_input("📍 Latitude", 8.0, 35.0, 22.658)
-lon = col2.number_input("📍 Longitude", 68.0, 97.0, 75.9261)
+lat = col1.number_input("📍 Latitude", 8.0, 35.0, 19.9993)
+lon = col2.number_input("📍 Longitude", 68.0, 97.0, 73.7900)
 
 if st.button("🚀 **PREDICT NPK**", type="primary"):
     # Find nearest location
@@ -62,3 +62,4 @@ if st.button("🚀 **PREDICT NPK**", type="primary"):
         st.metric("🍌 Potassium", f"{predictions['K_kg_ha']:.1f}", f"{closest_row['K_kg_ha']:.1f}")
     
     st.success(f"✅ **Match found**: {closest_row['state']}, {closest_row['district']} ({closest_row['soil_type']} soil)")
+
